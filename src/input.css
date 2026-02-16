@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  /* CUSTOMIZE COLOR */
+  --color-primary: #D32F2F;   /* Warna PRIMARY 60%  */
+  --color-secondary: #1A237E;  /* Warna SECONDARY 30%*/
+  --color-tertiary: #0F172A; /* Warna TERTIARY 10%*/
+
+  /* FONT CUSTOMIZE */
+  --font-sans: "Inter", ui-sans-serif, system-ui;
+}

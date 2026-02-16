@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PT. NEXTCOMM INDONESIA PRIMA - Solusi Telekomunikasi</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-slate-50 text-slate-900 font-sans">
+    <!-- navbar start -->
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <div class="shrink-0 flex items-center gap-2">
+            <div
+              class="w-44 h-20 md:w-50 md:h-26 flex items-center justify-center"
+            >
+              <img src="/dist/Logo-Nextcomm.png" alt="NEXTCOMM-logo" />
+            </div>
+            <span
+              class="font-bold text-xl tracking-tight text-secondary uppercase"
+              >Nextcomm</span
+            >
+          </div>
+
+          <div class="hidden lg:block">
+            <div class="ml-10 flex items-baseline space-x-8 font-medium">
+              <a href="#home" class="hover:text-primary transition">Beranda</a>
+              <a href="#about" class="hover:text-primary transition"
+                >Tentang Kami</a
+              >
+              <a href="#services" class="hover:text-primary transition"
+                >Layanan</a
+              >
+              <a
+                href="#contact"
+                class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-red-700 transition shadow-md shadow-slate-400"
+                >Hubungi Kami</a
+              >
+            </div>
+          </div>
+
+          <!-- hamburger menu start -->
+          <div class="lg:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="py-1.5 px-1.5 text-secondary hover:text-primary focus:outline-none lg:hidden border rounded-xl border-zinc-400 shadow-md shadow-slate-400 transition-all duration-300 ease-in-out"
+            >
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  id="hamburger-icon"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+                <path
+                  id="close-icon"
+                  class="hidden"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-white border-t border-slate-100 shadow-xl"
+      >
+        <div class="px-4 pt-2 pb-6 space-y-2">
+          <a
+            href="#home"
+            class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary"
+            >Beranda</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary"
+            >Tentang Kami</a
+          >
+          <a
+            href="#services"
+            class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary"
+            >Layanan</a
+          >
+          <a
+            href="#contact"
+            class="block w-full text-center bg-primary text-white px-3 py-3 rounded-lg font-bold"
+            >Hubungi Kami</a
+          >
+        </div>
+      </div>
+      <!-- hamburger menu end -->
+    </nav>
+    <!-- navbar end -->
+
+    <!-- Home section start-->
+    <section
+      id="home"
+      class="relative h-screen flex items-center justify-center overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          src="/dist/tower2.jpg"
+          alt="Telecommunication Tower"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute inset-0 bg-linear-to-r from-tertiary/90 to-transparent"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white"
+      >
+        <h2 class="text-primary font-bold tracking-widest uppercase mb-4">
+          PT. NEXTCOMM INDONESIA PRIMA
+        </h2>
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+          Layanan Konstruksi <br />
+          <span
+            class="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-orange-500"
+            >Telekomunikasi Terkemuka
+          </span>
+        </h1>
+        <p class="text-lg md:text-xl text-slate-300 max-w-2xl mb-8">
+          Mitra profesional dan terpercaya dalam pembangunan infrastruktur
+          telekomunikasi untuk mendukung pertumbuhan bisnis Anda.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="#services"
+            class="bg-primary hover:bg-red-700 text-white px-8 py-4 rounded-xl font-bold transition transform hover:scale-105"
+          >
+            Lihat Layanan
+          </a>
+          <a
+            href="#about"
+            class="bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-bold transition"
+          >
+            Tentang Kami
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Home section end -->
+    a
+    <!-- js external -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>
