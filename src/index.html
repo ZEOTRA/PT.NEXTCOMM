@@ -3,11 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PT. NEXTCOMM INDONESIA PRIMA - Solusi Telekomunikasi</title>
+    <title>Nextcomm Indonesia Prima|Solusi Telekomunikasi</title>
     <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/dist/Logo-notext.png"
+      class="w-20 h-auto object-cover"
+    />
   </head>
 
   <body class="bg-slate-50 text-slate-900 font-sans">
+    <!-- loading spinner start -->
+    <div
+      id="preloader"
+      class="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-white transition-opacity duration-300 opacity-0 pointer-events-none"
+    >
+      <div class="relative">
+        <div
+          class="w-20 h-20 border-4 border-slate-100 border-t-primary rounded-full animate-spin"
+        ></div>
+
+        <div class="absolute inset-0 flex items-center justify-center">
+          <img
+            src="/dist/Logo-notext.png"
+            alt="Icon"
+            class="w-8 h-8 object-contain"
+          />
+        </div>
+      </div>
+
+      <div class="mt-6 flex flex-col items-center">
+        <span
+          class="text-secondary font-bold tracking-[0.3em] uppercase text-xs animate-pulse"
+        >
+          Nextcomm
+        </span>
+      </div>
+    </div>
+    <!-- loading spinner end -->
+
     <!-- navbar start -->
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +52,7 @@
               class="w-44 h-20 md:w-50 md:h-26 flex items-center justify-center"
             >
               <a href="#home"
-                ><img src="/dist/Logo-Nextcomm.png" alt="NEXTCOMM-logo"
+                ><img src="/dist/Logo-Nextcomm-nobg.png" alt="NEXTCOMM-logo"
               /></a>
             </div>
             <span
@@ -1145,10 +1180,10 @@
               class="flex items-center gap-2 justify-center md:justify-start mb-4"
             >
               <div
-                class="w-28 h-16 md:w-32 md:h-20 flex items-center justify-center"
+                class="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center"
               >
                 <a href="#home"
-                  ><img src="/dist/Logo-Nextcomm.png" alt="Logo"
+                  ><img src="/dist/Logo-notext.png" alt="Logo"
                 /></a>
               </div>
               <span
@@ -1217,7 +1252,7 @@
     <!-- back to top button -->
     <button
       id="backToTop"
-      class="flex fixed bottom-8 right-8 z-50 opacity-0 invisible h-10 w-10 items-center justify-center rounded-full bg-primary/90 text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:scale-110"
+      class="flex fixed bottom-8 right-8 z-50 opacity-0 invisible h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-primary/90 text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:scale-110"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

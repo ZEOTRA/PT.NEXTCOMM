@@ -1,3 +1,26 @@
+// LOADING SPINNER START
+const preloader = document.getElementById('preloader');
+  let isPageLoaded = false;
+
+  // Jika dalam 400ms halaman belum selesai dimuat, tampilkan spinner
+  const showTimer = setTimeout(() => {
+    if (!isPageLoaded) {
+      preloader.classList.remove('opacity-0', 'pointer-events-none');
+      preloader.classList.add('opacity-100');
+    }
+  }, 400); 
+
+  window.addEventListener('load', () => {
+    isPageLoaded = true;
+    clearTimeout(showTimer); // Batalkan timer jika web sudah siap
+
+    // Sembunyikan spinner (jika sempat muncul karena internet lambat)
+    preloader.classList.add('opacity-0', 'pointer-events-none');
+    preloader.classList.remove('opacity-100');
+  });
+// LOADING SPINNER END
+
+
 //  HAMBURGER MENU START
 const btn = document.getElementById("mobile-menu-button");
 const menu = document.getElementById("mobile-menu");
@@ -83,26 +106,56 @@ document.addEventListener("keydown", function (e) {
 });
 // LEGALISIR DOKUMEN CARD END
 
+// FORM CHAT LANGSUNG KE WHATSAPP START
+document
+  .getElementById("whatsappForm")
+  .addEventListener("submit", function (e) {
+    e.preventDefault(); // Mencegah halaman refresh
 
+    // 1. Ambil data dari input
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    // 2. Nomor WhatsApp Perusahaan
+    const phoneNumber = "621264798641";
+
+    // 3. Susun pesan agar rapi
+    const fullMessage =
+      `Halo PT. NEXTCOMM INDONESIA PRIMA,%0A%0A` +
+      `Saya ingin menanyakan tentang proyek.%0A%0A` +
+      `*Nama:* ${name}%0A` +
+      `*Email:* ${email}%0A` +
+      `*Subjek:* ${subject}%0A` +
+      `*Pesan:* ${message}`;
+
+    // 4. Buka URL WhatsApp
+    const waUrl = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
+
+    // Membuka di tab baru
+    window.open(waUrl, "_blank");
+  });
+// FORM CHAT LANGSUNG KE WHATSAPP END
 
 // back to top button start
-const backToTopBtn = document.getElementById('backToTop');
+const backToTopBtn = document.getElementById("backToTop");
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-    backToTopBtn.classList.replace('opacity-0', 'opacity-100');
-    backToTopBtn.classList.replace('invisible', 'visible');
-} else {
-    backToTopBtn.classList.replace('opacity-100', 'opacity-0');
-    backToTopBtn.classList.replace('visible', 'invisible');
-}
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    backToTopBtn.classList.replace("opacity-0", "opacity-100");
+    backToTopBtn.classList.replace("invisible", "visible");
+  } else {
+    backToTopBtn.classList.replace("opacity-100", "opacity-0");
+    backToTopBtn.classList.replace("visible", "invisible");
+  }
 });
 
 // Fungsi saat tombol diklik
-backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // Efek meluncur halus
-    });
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Efek meluncur halus
+  });
 });
 // back to top button end
