@@ -1,25 +1,24 @@
 // LOADING SPINNER START
-const preloader = document.getElementById('preloader');
-  let isPageLoaded = false;
+const preloader = document.getElementById("preloader");
+let isPageLoaded = false;
 
-  // Jika dalam 400ms halaman belum selesai dimuat, tampilkan spinner
-  const showTimer = setTimeout(() => {
-    if (!isPageLoaded) {
-      preloader.classList.remove('opacity-0', 'pointer-events-none');
-      preloader.classList.add('opacity-100');
-    }
-  }, 400); 
+// Jika dalam 400ms halaman belum selesai dimuat, tampilkan spinner
+const showTimer = setTimeout(() => {
+  if (!isPageLoaded) {
+    preloader.classList.remove("opacity-0", "pointer-events-none");
+    preloader.classList.add("opacity-100");
+  }
+}, 400);
 
-  window.addEventListener('load', () => {
-    isPageLoaded = true;
-    clearTimeout(showTimer); // Batalkan timer jika web sudah siap
+window.addEventListener("load", () => {
+  isPageLoaded = true;
+  clearTimeout(showTimer); // Batalkan timer jika web sudah siap
 
-    // Sembunyikan spinner (jika sempat muncul karena internet lambat)
-    preloader.classList.add('opacity-0', 'pointer-events-none');
-    preloader.classList.remove('opacity-100');
-  });
+  // Sembunyikan spinner (jika sempat muncul karena internet lambat)
+  preloader.classList.add("opacity-0", "pointer-events-none");
+  preloader.classList.remove("opacity-100");
+});
 // LOADING SPINNER END
-
 
 //  HAMBURGER MENU START
 const btn = document.getElementById("mobile-menu-button");
@@ -119,7 +118,7 @@ document
     const message = document.getElementById("message").value;
 
     // 2. Nomor WhatsApp Perusahaan
-    const phoneNumber = "621264798641";
+    const phoneNumber = "6281384431535";
 
     // 3. Susun pesan agar rapi
     const fullMessage =
@@ -159,3 +158,15 @@ backToTopBtn.addEventListener("click", () => {
   });
 });
 // back to top button end
+
+
+// include footer
+fetch('footer.html')
+        .then(response => {
+          if (!response.ok) throw new Error('File footer tidak ditemukan');
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById('footer-1').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
